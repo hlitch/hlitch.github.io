@@ -1,0 +1,19 @@
+.tradingInfo {
+    display: flex;
+}
+
+.gains {
+    color: green;
+}
+
+.losses {
+    color: red;
+}
+
+.mostTraded {
+    color: blue;
+}
+
+.titles {
+    text-align: center;
+}
