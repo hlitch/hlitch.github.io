@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <head>
+        <title>Brick Breaker</title>
+        <style>
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                background-color: #000;
+                font-family: Arial, sans-serif;
+            }
+
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            h1 {
+
+                color: #fff;
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+
+            #game-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+            }
+
+            #canvas3 {
+                display: block;
+                margin-top: 20px;
+                border: 2px solid #fff;
+                background-color: #000;
+            }
+
+            #score {
+                color: #fff;
+                font-size: 24px;
+                margin-top: 20px;
+            }
+
+
+
+            button {
+                display: flex;
+                justify-content: center;
+
+                margin-bottom: 20px;
+                padding: 5px;
+                width: 120px;
+                height: 40px;
+                background-color: #3498db;
+                color: #fff;
+                font-size: 16px;
+                font-weight: bold;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                margin: 10px;
+            }
+
+            button:hover {
+                background-color: #2980b9;
+            }
+        </style>
+    </head>
+
+<body>
+    <div id="game-container">
+        <h1>Brick Breaker</h1>
+        <div id="score"></div>
+        <canvas id="canvas3"></canvas>
+        <div>
+            <button id="addBall">Start Game</button>
+            <button id="pauseButton">Pause Game</button>
+        </div>
+    </div>
+    <script src="brickGame.js"></script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Brick Breaker</title>
+        <style>
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                background-color: #000;
+                font-family: Arial, sans-serif;
+            }
+
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            h1 {
+                color: #fff;
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+
+            #game-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+            }
+
+            #canvas3 {
+                display: block;
+                margin-top: 20px;
+                border: 2px solid #fff;
+                background-color: #000;
+            }
+
+            #score {
+                color: #fff;
+                font-size: 24px;
+                margin-top: 20px;
+            }
+
+            #btn-container {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            button {
+                width: 120px;
+                height: 40px;
+                background-color: #3498db;
+                color: #fff;
+                font-size: 16px;
+                font-weight: bold;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                margin: 0 10px;
+            }
+
+            button:hover {
+                background-color: #2980b9;
+            }
+
+            .brick-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            .brick {
+                width: 70px;
+                height: 20px;
+                background-color: #3498db;
+                border-radius: 4px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+                margin: 2px;
+            }
+        </style>
+    </head>
+
+<body>
+    <div id="game-container">
+        <h1>Brick Breaker</h1>
+        <canvas id="myCanvas"></canvas>
+        <canvas id="canvas3"></canvas>
+        <div id="score"></div>
+        <div id="btn-container">
+            <button id="startButton">Start</button>
+            <button id="pauseButton">Pause</button>
+            <button id="resetButton">Reset</button>
+        </div>
+        <div class="brick-container">
+            
+        </div>
+    </div>
+
+    <script src="bouncingBalls.js"></script>
+</body>
+
+</html> -->

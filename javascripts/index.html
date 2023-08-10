@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--   <style>
+    #formCalculatorContainer {
+      width: calc(50% - 4px);
+      border: 1px solid black;
+      margin-left: 25%;
+    }
+    #inputEntries{
+      margin-left: 25%;
+    }
+
+    #calculatorWrapper {
+      display: block;
+      margin-left: 25%;
+      width: 100%;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .calculatorContainer {
+      width: calc(50% - 4px);
+      height: 320px;
+
+      border: 1px solid black;
+    }
+
+    #listsContainer {
+      margin: 2.5%;
+      display: block;
+      border: 1px solid black;
+      width: 50%;
+      height: 800px;
+      margin-left: 25%;
+      background-color: pink;
+    }
+
+    #screen {
+      width: 95%;
+      margin: 2.5%;
+      height: 50px;
+      border: 1px solid black;
+      text-align: right;
+      font-size: 50px;
+    }
+
+    .buttonWrapper {
+      width: 95%;
+      margin: 2.5%;
+    }
+
+    .row {
+      width: 100%;
+      display: flex;
+    }
+
+    .calcButton,
+    .numButton,
+    #clear,
+    #enter {
+      width: 25%;
+      margin: 5px;
+      height: 25px;
+    }
+
+    #resultsTotal {
+      /* position: absolute;
+      bottom: -200px; */
+
+    }
+
+    #totals {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      border: 1px solid black;
+      text-align: center;
+    }
+
+    #enter {
+      /*position: absolute;
+      bottom: 0px;
+      width: 7%;
+      right: 600px;*/
+      width: 100%;
+    }
+
+    #totalBox {
+      position: absolute;
+      font-size: 30px;
+      text-align: center;
+      border: 1px solid black;
+      bottom: 15%;
+      margin-left: 45px;
+    }
+
+    #save {
+      width: 100%;
+      margin: auto;
+      margin-top: 5px;
+      height: 20px;
+    }
+
+    #entryForm {
+      display: block;
+      width: calc(50% - 4px);
+      height: 100px;
+      margin: auto;
+      border: 1px solid black;
+    }
+  </style> -->
+
+  <!--MY MODIFIED VERSION-->
+  <!-- <style>
+    #formCalculatorContainer {
+      width: 50%;
+      margin: 0 auto;
+      height: min-content;
+      border: 1px solid black;
+      padding: 5px;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+    }
+
+    #inputEntries {
+      width: 100%;
+      padding: 5px;
+      border: none;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+      outline: none;
+    }
+
+    #calculatorWrapper {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .calculatorContainer {
+      width: 35%;
+      height: 280px;
+      margin: 0 auto;
+      border: 1px solid black;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #screen {
+      width: 90%;
+      height: 15px;
+      margin: 5px auto;
+      border: 1px solid black;
+      text-align: right;
+      font-size: 20px;
+      padding: 2.5px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .buttonWrapper {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .numButton,
+    .calcButton,
+    #clear {
+      flex: 0 0 23%;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4c4c4c;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .numButton:hover,
+    .calcButton:hover {
+      background-color: #333;
+    }
+
+    /**/
+    #equal {
+      flex: 0 0 100%;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      background-color: #e74c3c;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #equal:hover {
+      background-color: #c0392b;
+    }
+
+    #totals {
+      margin-top: 10px;
+      border: 1px solid black;
+      border-radius: 5px;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    #save {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      height: 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #3498db;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #save:hover {
+      background-color: #2980b9;
+    }
+
+    #entryForm {
+      width: 50%;
+      height: 40px;
+      margin: 0 auto;
+      border: 1px solid black;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: #f5f5f5;
+      margin-top: 5px;
+    }
+
+    #listsContainer {
+      width: 50%;
+      margin: 0 auto;
+      border: 1px solid black;
+      border-radius: 5px;
+      padding: 20px;
+      background-color: #f5f5f5;
+      margin-top: 20px;
+    }
+
+    #date {
+      width: 50%;
+      margin: 25%;
+      padding: 5px;
+      border: none;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      font-size: 12px;
+      outline: none;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+
+    .options {
+      width: 50%;
+      padding: 5px;
+      border: none;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      font-size: 12px;
+      outline: none;
+      margin: 25%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    #clearAllResults,
+    #clearResult,
+    #standardClient,
+    #discountedClient {
+      width: calc(25% - 4px);
+      height: 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #e74c3c;
+      color: #fff;
+      font-size: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 5px;
+    }
+
+    #clearAllResults:hover,
+    #clearResult:hover,
+    #standardClient:hover,
+    #discountedClient:hover {
+      background-color: #c0392b;
+    }
+
+    #results {
+      margin-top: 20px;
+    }
+
+    #resultsList {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #totals {
+      margin-top: 5px;
+      border: 1px solid black;
+      border-radius: 5px;
+      padding: 5px;
+      background-color: #f5f5f5;
+    }
+
+    #totalsgross,
+    #totalsexpenses,
+    #totalstaxes,
+    #totalsmaaser {
+      margin-bottom: 5px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-size: 24px;
+    }
+  </style> -->
+  <!--END MY MODIFIED VERSION-->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    #formCalculatorContainer {
+      width: 45%;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    #inputEntries {
+      margin: 0 auto;
+      width: 80%;
+      padding: 10px;
+      border: 1px solid #3e7ee7;
+      border-radius: 5px;
+      font-size: 16px;
+      outline: #2980b9, blue, 3px;
+    }
+
+    #enter {
+      width: 95%;
+      height: 20px;
+      margin: 0 auto;
+      margin-top: 2px;
+      border: none;
+      border-radius: 5px;
+      background-color: #211940;
+      color: #ce7e7e;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #calculatorWrapper {
+      width: 45%;
+      margin: 0 auto;
+      padding-left: 20px;
+    }
+
+    .calculatorContainer {
+      height: 320px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #listsContainer {
+      width: 45%;
+      height: min-content;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    #screen {
+      width: 90%;
+      height: 20px;
+      margin: 10px auto;
+      border: 1px solid #ddd;
+      text-align: right;
+      font-size: 24px;
+      padding: 10px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .buttonWrapper {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .numButton,
+    .calcButton,
+    #clear,
+    #equal {
+      width: 23%;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4c4c4c;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .numButton:hover,
+    .calcButton:hover,
+    #clear:hover,
+    #equal:hover {
+      background-color: #333;
+    }
+
+    #equal {
+      width: 100%;
+      background-color: #e74c3c;
+    }
+
+    #totals {
+      margin-top: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    #save {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      background-color: #3498db;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #save:hover {
+      background-color: #2980b9;
+    }
+
+    #entryForm {
+      width: 50%;
+      height: 100px;
+      margin: 0 auto;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      background-color: #fff;
+    }
+
+
+
+    #date {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+      outline: none;
+      margin-bottom: 10px;
+    }
+
+    .options {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+      outline: none;
+      margin-bottom: 10px;
+    }
+
+    #clearAllResults,
+    #clearResult,
+    #standardClient,
+    #discountedClient {
+      width: 100%;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      background-color: #e74c3c;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 10px;
+    }
+
+    #clearAllResults:hover,
+    #clearResult:hover,
+    #standardClient:hover,
+    #discountedClient:hover {
+      background-color: #c0392b;
+    }
+
+    #results {
+      margin-top: 20px;
+    }
+
+    #resultsList {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #totals {
+      margin-top: 25px;
+      height: min-content;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: #fff;
+      outline: #2980b9;
+    }
+
+    #totalsgross,
+    #totalsexpenses,
+    #totalstaxes,
+    #totalsmaaser {
+      margin-bottom: 10px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-size: 24px;
+    }
+
+    p {
+      font-weight: bold;
+      font-size: large;
+      text-align: center;
+      color: #333;
+    }
+
+    @media screen and (max-width: 800px) {
+      .container {
+        display: flex;
+        flex-wrap: wrap-reverse;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <dialog id="random">Please Confirm Entry
+    <form method="dialog">
+      <label id="confirmLabel"></label>
+      <button id="yes" class="confirm">Yes</button>
+      <button id="no" class="confirm">No</button>
+    </form>
+  </dialog>
+  <div class="container">
+
+
+    <div id="formCalculatorContainer">
+      <form id="entryForm">
+        <label>Please submit amount or use the calculator:</label>
+        <input type="text" id="inputEntries" />
+        <button id="enter">Submit</button>
+      </form>
+      <div id="results">
+        <ul id="resultsList">
+        </ul>
+        <!--ul id="afterEqualList"></ul-->
+        <ol id="afterEqualList"></ol> <!-- //rec5-changed -->
+        <ol id="afterEqualList2"></ol> <!-- //rec5-added -->
+      </div>
+    </div>
+    <div id="listsContainer">
+      <form><input id="date" type="date"></form>
+      <select class="options">
+        <option value="gross" class="options">Gross Total</option>
+        <option value="expenses" class="options">Expenses</option>
+        <option value="taxes" class="options">Taxes</option>
+        <option value="maaser" class="options">Maaser</option>
+      </select>
+      <div id="calculatorWrapper">
+        <div class="calculatorContainer">
+          <!--form id="screen">
+                      <input type="number" >
+                  </form-->
+
+          <div id="screen"></div>
+          <div class="buttonWrapper">
+            <div class="row">
+              <button class="numButton">7</button>
+              <button class="numButton">8</button>
+              <button class="numButton">9</button>
+              <button class="calcButton">X</button>
+            </div>
+            <div class="row">
+              <button class="numButton">4</button>
+              <button class="numButton">5</button>
+              <button class="numButton">6</button>
+              <button class="calcButton">-</button>
+            </div>
+            <div class="row">
+              <button class="numButton">1</button>
+              <button class="numButton">2</button>
+              <button class="numButton">3</button>
+              <button class="calcButton">+</button>
+            </div>
+            <div class="row">
+              <button id="clear">C</button>
+              <button class="numButton">0</button>
+              <button class="numButton">.</button>
+              <button class="calcButton">/</button>
+            </div>
+            <div class="row">
+              <button class="calcButton" id="equal">=</button>
+
+              <!--button id="enter" class="calcButton">Enter</button-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>Totals:</p>
+      <div id="totals"> <!-- //rec3 -->
+        <div id="totalsgross"></div> <!-- //rec4.1 -->
+        <div id="totalsexpenses"></div> <!-- //rec4.1 -->
+        <div id="totalstaxes"></div> <!-- //rec4.1 -->
+        <div id="totalsmaaser"></div> <!-- //rec4.1 -->
+      </div>
+
+      <div id="setButtons">
+        <button type="submit" id="save">Save</button>
+
+        <button id="standardClient">Standard Client</button>
+        <button id="discountedClient">Client discount</button>
+        <button id="clearAllResults">Clear All Results</button>
+        <button id="clearResult">Clear a Result</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="calculator.js"></script>
+</body>
+
+</html>
