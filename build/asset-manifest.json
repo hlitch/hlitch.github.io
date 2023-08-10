@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hlitch/static/css/main.04df6113.css",
+    "main.js": "/hlitch/static/js/main.bc3da3c8.js",
+    "static/js/787.91ecc9c0.chunk.js": "/hlitch/static/js/787.91ecc9c0.chunk.js",
+    "index.html": "/hlitch/index.html",
+    "main.04df6113.css.map": "/hlitch/static/css/main.04df6113.css.map",
+    "main.bc3da3c8.js.map": "/hlitch/static/js/main.bc3da3c8.js.map",
+    "787.91ecc9c0.chunk.js.map": "/hlitch/static/js/787.91ecc9c0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04df6113.css",
+    "static/js/main.bc3da3c8.js"
+  ]
+}
