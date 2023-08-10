@@ -1,6 +1,6 @@
 import './header.css';
 import './body.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Plot from 'react-plotly.js';
 import StartUpComponent from './StartUpComponent';
 
