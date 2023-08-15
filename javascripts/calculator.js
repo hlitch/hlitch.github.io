@@ -203,11 +203,11 @@
                     b = '';
 
                     display.innerText = a;
-                    e.preventDefault();
+                    //e.preventDefault();
 
-                    resultsArray[ctarget].push(Number(display.value));
-                    autoCalc(ctarget); //rec12
-                    addToList('Entry for ' + ctarget + ': Amount: $' + Number(inputEntries.value));
+                    // resultsArray[ctarget].push(Number(display.value));
+                    // autoCalc(ctarget); //rec12
+                    // addToList('Entry for ' + ctarget + ': Amount: $' + Number(display.value));
                     //confirmOrContinue(); //rec12 incorporated so could remove need for pastResult
                 }
 
