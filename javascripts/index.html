@@ -6,336 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <!--   <style>
-    #formCalculatorContainer {
-      width: calc(50% - 4px);
-      border: 1px solid black;
-      margin-left: 25%;
-    }
-    #inputEntries{
-      margin-left: 25%;
-    }
 
-    #calculatorWrapper {
-      display: block;
-      margin-left: 25%;
-      width: 100%;
-      margin-top: 10px;
-      text-align: center;
-    }
-
-    .calculatorContainer {
-      width: calc(50% - 4px);
-      height: 320px;
-
-      border: 1px solid black;
-    }
-
-    #listsContainer {
-      margin: 2.5%;
-      display: block;
-      border: 1px solid black;
-      width: 50%;
-      height: 800px;
-      margin-left: 25%;
-      background-color: pink;
-    }
-
-    #screen {
-      width: 95%;
-      margin: 2.5%;
-      height: 50px;
-      border: 1px solid black;
-      text-align: right;
-      font-size: 50px;
-    }
-
-    .buttonWrapper {
-      width: 95%;
-      margin: 2.5%;
-    }
-
-    .row {
-      width: 100%;
-      display: flex;
-    }
-
-    .calcButton,
-    .numButton,
-    #clear,
-    #enter {
-      width: 25%;
-      margin: 5px;
-      height: 25px;
-    }
-
-    #resultsTotal {
-      /* position: absolute;
-      bottom: -200px; */
-
-    }
-
-    #totals {
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      border: 1px solid black;
-      text-align: center;
-    }
-
-    #enter {
-      /*position: absolute;
-      bottom: 0px;
-      width: 7%;
-      right: 600px;*/
-      width: 100%;
-    }
-
-    #totalBox {
-      position: absolute;
-      font-size: 30px;
-      text-align: center;
-      border: 1px solid black;
-      bottom: 15%;
-      margin-left: 45px;
-    }
-
-    #save {
-      width: 100%;
-      margin: auto;
-      margin-top: 5px;
-      height: 20px;
-    }
-
-    #entryForm {
-      display: block;
-      width: calc(50% - 4px);
-      height: 100px;
-      margin: auto;
-      border: 1px solid black;
-    }
-  </style> -->
-
-  <!--MY MODIFIED VERSION-->
-  <!-- <style>
-    #formCalculatorContainer {
-      width: 50%;
-      margin: 0 auto;
-      height: min-content;
-      border: 1px solid black;
-      padding: 5px;
-      background-color: #f5f5f5;
-      border-radius: 5px;
-    }
-
-    #inputEntries {
-      width: 100%;
-      padding: 5px;
-      border: none;
-      border-radius: 5px;
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      font-size: 16px;
-      outline: none;
-    }
-
-    #calculatorWrapper {
-      margin-top: 10px;
-      text-align: center;
-    }
-
-    .calculatorContainer {
-      width: 35%;
-      height: 280px;
-      margin: 0 auto;
-      border: 1px solid black;
-      border-radius: 5px;
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    #screen {
-      width: 90%;
-      height: 15px;
-      margin: 5px auto;
-      border: 1px solid black;
-      text-align: right;
-      font-size: 20px;
-      padding: 2.5px;
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .buttonWrapper {
-      width: 90%;
-      margin: 0 auto;
-    }
-
-    .row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
-
-    .numButton,
-    .calcButton,
-    #clear {
-      flex: 0 0 23%;
-      height: 40px;
-      border: none;
-      border-radius: 5px;
-      background-color: #4c4c4c;
-      color: #fff;
-      font-size: 18px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .numButton:hover,
-    .calcButton:hover {
-      background-color: #333;
-    }
-
-    /**/
-    #equal {
-      flex: 0 0 100%;
-      height: 40px;
-      border: none;
-      border-radius: 5px;
-      background-color: #e74c3c;
-      color: #fff;
-      font-size: 18px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    #equal:hover {
-      background-color: #c0392b;
-    }
-
-    #totals {
-      margin-top: 10px;
-      border: 1px solid black;
-      border-radius: 5px;
-      padding: 20px;
-      background-color: #f5f5f5;
-    }
-
-    #save {
-      width: 100%;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      height: 20px;
-      border: none;
-      border-radius: 5px;
-      background-color: #3498db;
-      color: #fff;
-      font-size: 18px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    #save:hover {
-      background-color: #2980b9;
-    }
-
-    #entryForm {
-      width: 50%;
-      height: 40px;
-      margin: 0 auto;
-      border: 1px solid black;
-      border-radius: 5px;
-      padding: 10px;
-      background-color: #f5f5f5;
-      margin-top: 5px;
-    }
-
-    #listsContainer {
-      width: 50%;
-      margin: 0 auto;
-      border: 1px solid black;
-      border-radius: 5px;
-      padding: 20px;
-      background-color: #f5f5f5;
-      margin-top: 20px;
-    }
-
-    #date {
-      width: 50%;
-      margin: 25%;
-      padding: 5px;
-      border: none;
-      border-radius: 5px;
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      font-size: 12px;
-      outline: none;
-      margin-bottom: 5px;
-      margin-top: 5px;
-    }
-
-    .options {
-      width: 50%;
-      padding: 5px;
-      border: none;
-      border-radius: 5px;
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      font-size: 12px;
-      outline: none;
-      margin: 25%;
-      margin-top: 5px;
-      margin-bottom: 5px;
-    }
-
-    #clearAllResults,
-    #clearResult,
-    #standardClient,
-    #discountedClient {
-      width: calc(25% - 4px);
-      height: 20px;
-      border: none;
-      border-radius: 5px;
-      background-color: #e74c3c;
-      color: #fff;
-      font-size: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin-bottom: 5px;
-    }
-
-    #clearAllResults:hover,
-    #clearResult:hover,
-    #standardClient:hover,
-    #discountedClient:hover {
-      background-color: #c0392b;
-    }
-
-    #results {
-      margin-top: 20px;
-    }
-
-    #resultsList {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    #totals {
-      margin-top: 5px;
-      border: 1px solid black;
-      border-radius: 5px;
-      padding: 5px;
-      background-color: #f5f5f5;
-    }
-
-    #totalsgross,
-    #totalsexpenses,
-    #totalstaxes,
-    #totalsmaaser {
-      margin-bottom: 5px;
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      font-size: 24px;
-    }
-  </style> -->
-  <!--END MY MODIFIED VERSION-->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -678,3 +349,336 @@
 </body>
 
 </html>
+
+
+
+  <!--   <style>
+      #formCalculatorContainer {
+        width: calc(50% - 4px);
+        border: 1px solid black;
+        margin-left: 25%;
+      }
+      #inputEntries{
+        margin-left: 25%;
+      }
+  
+      #calculatorWrapper {
+        display: block;
+        margin-left: 25%;
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+      }
+  
+      .calculatorContainer {
+        width: calc(50% - 4px);
+        height: 320px;
+  
+        border: 1px solid black;
+      }
+  
+      #listsContainer {
+        margin: 2.5%;
+        display: block;
+        border: 1px solid black;
+        width: 50%;
+        height: 800px;
+        margin-left: 25%;
+        background-color: pink;
+      }
+  
+      #screen {
+        width: 95%;
+        margin: 2.5%;
+        height: 50px;
+        border: 1px solid black;
+        text-align: right;
+        font-size: 50px;
+      }
+  
+      .buttonWrapper {
+        width: 95%;
+        margin: 2.5%;
+      }
+  
+      .row {
+        width: 100%;
+        display: flex;
+      }
+  
+      .calcButton,
+      .numButton,
+      #clear,
+      #enter {
+        width: 25%;
+        margin: 5px;
+        height: 25px;
+      }
+  
+      #resultsTotal {
+        /* position: absolute;
+        bottom: -200px; */
+  
+      }
+  
+      #totals {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        border: 1px solid black;
+        text-align: center;
+      }
+  
+      #enter {
+        /*position: absolute;
+        bottom: 0px;
+        width: 7%;
+        right: 600px;*/
+        width: 100%;
+      }
+  
+      #totalBox {
+        position: absolute;
+        font-size: 30px;
+        text-align: center;
+        border: 1px solid black;
+        bottom: 15%;
+        margin-left: 45px;
+      }
+  
+      #save {
+        width: 100%;
+        margin: auto;
+        margin-top: 5px;
+        height: 20px;
+      }
+  
+      #entryForm {
+        display: block;
+        width: calc(50% - 4px);
+        height: 100px;
+        margin: auto;
+        border: 1px solid black;
+      }
+    </style> -->
+  
+  <!--MY MODIFIED VERSION-->
+  <!-- <style>
+      #formCalculatorContainer {
+        width: 50%;
+        margin: 0 auto;
+        height: min-content;
+        border: 1px solid black;
+        padding: 5px;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+      }
+  
+      #inputEntries {
+        width: 100%;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        outline: none;
+      }
+  
+      #calculatorWrapper {
+        margin-top: 10px;
+        text-align: center;
+      }
+  
+      .calculatorContainer {
+        width: 35%;
+        height: 280px;
+        margin: 0 auto;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+  
+      #screen {
+        width: 90%;
+        height: 15px;
+        margin: 5px auto;
+        border: 1px solid black;
+        text-align: right;
+        font-size: 20px;
+        padding: 2.5px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+  
+      .buttonWrapper {
+        width: 90%;
+        margin: 0 auto;
+      }
+  
+      .row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+  
+      .numButton,
+      .calcButton,
+      #clear {
+        flex: 0 0 23%;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4c4c4c;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+  
+      .numButton:hover,
+      .calcButton:hover {
+        background-color: #333;
+      }
+  
+      /**/
+      #equal {
+        flex: 0 0 100%;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        background-color: #e74c3c;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+  
+      #equal:hover {
+        background-color: #c0392b;
+      }
+  
+      #totals {
+        margin-top: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+  
+      #save {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #3498db;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+  
+      #save:hover {
+        background-color: #2980b9;
+      }
+  
+      #entryForm {
+        width: 50%;
+        height: 40px;
+        margin: 0 auto;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #f5f5f5;
+        margin-top: 5px;
+      }
+  
+      #listsContainer {
+        width: 50%;
+        margin: 0 auto;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 20px;
+        background-color: #f5f5f5;
+        margin-top: 20px;
+      }
+  
+      #date {
+        width: 50%;
+        margin: 25%;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 12px;
+        outline: none;
+        margin-bottom: 5px;
+        margin-top: 5px;
+      }
+  
+      .options {
+        width: 50%;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 12px;
+        outline: none;
+        margin: 25%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+  
+      #clearAllResults,
+      #clearResult,
+      #standardClient,
+      #discountedClient {
+        width: calc(25% - 4px);
+        height: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #e74c3c;
+        color: #fff;
+        font-size: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-bottom: 5px;
+      }
+  
+      #clearAllResults:hover,
+      #clearResult:hover,
+      #standardClient:hover,
+      #discountedClient:hover {
+        background-color: #c0392b;
+      }
+  
+      #results {
+        margin-top: 20px;
+      }
+  
+      #resultsList {
+        list-style-type: none;
+        padding: 0;
+      }
+  
+      #totals {
+        margin-top: 5px;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: #f5f5f5;
+      }
+  
+      #totalsgross,
+      #totalsexpenses,
+      #totalstaxes,
+      #totalsmaaser {
+        margin-bottom: 5px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 24px;
+      }
+    </style> -->
+  <!--END MY MODIFIED VERSION-->

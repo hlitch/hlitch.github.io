@@ -147,6 +147,7 @@
     let lastButton = ''; // fixes bug when last button is operator
 
     let ctarget = 'gross';
+
     resultsArray['gross'] = [];
 
     resultsArray['maaser'] = [];
@@ -202,7 +203,11 @@
                     b = '';
 
                     display.innerText = a;
+                    e.preventDefault();
 
+                    resultsArray[ctarget].push(Number(display.value));
+                    autoCalc(ctarget); //rec12
+                    addToList('Entry for ' + ctarget + ': Amount: $' + Number(inputEntries.value));
                     //confirmOrContinue(); //rec12 incorporated so could remove need for pastResult
                 }
 
@@ -545,7 +550,7 @@
             body: jsonStr
         });
         const posted = response.text();
-        alert(posted);
+        alert(JSON.stringify(posted));
     }
 
     numberButtons();
