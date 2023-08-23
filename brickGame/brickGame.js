@@ -71,10 +71,11 @@
 
     const paddle = {
         x: canvas3.width - 400,
-        y: canvas3.height + 175
+        y: canvas3.height + 200
     }
 
     function drawPaddle() {
+        paddle.y = canvas3.height - 25;
         context.fillStyle = 'red';
         context.fillRect(paddle.x, paddle.y, paddleWidth, paddleHeight);
     }
