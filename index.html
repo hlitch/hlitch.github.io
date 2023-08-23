@@ -2,102 +2,168 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <style>
-
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
-<body class="pt-5 mt-2">
-  <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">PCS</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-1 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+<body>
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+        <div class="py-5">
+            <h1 class="display-5 fw-bold text-white">Heshy Litchfield</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="fs-5 mb-4">World class developer. Creating problems inefficiently.</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <a class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold"
+                        href="https://github.com/hlitch/class_code" target="_blank">Github</a>
+
+                    <a class="btn btn-outline-light btn-lg px-4" data-bs-toggle="offcanvas" href="#offcanvasExample">
+                        Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Project Links</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                Here are some projects for you to browse.
+            </div>
+            <!--div>Click on an item to be directed to the project.</div-->
+
+            <ul>
+                <li><a class="dropdown-item" href="/stockIndex.html">Stock App</a></li>
+                <li><a class="dropdown-item" href="brickgame/brickgame.html">Brick Breaker</a></li>
+                <li><a class="dropdown-item" href="javascripts/index.html">Stock App</a></li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-  <div class="p-5 mb-4 bg-light rounded-3">
-    <div class="container py-5 text-center">
-      <h1 class="display-5 fw-bold">Heshy Litchfield's Portfolio</h1>
-      <p class="fs-4 text-danger">C#, SQL, HTML/CSS, JavaScript, React, Node (MERN Stack). Coding like the
-        <strong>pros!</strong>
-      </p>
-      <button class="btn btn-danger btn-lg" type="button">Click here for details</button>
+        </div>
     </div>
 
     <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-lg-3 text-center my-2">
-          <h2 class="text-center">Code</h2>
-          <p>Stock App</p>
-          <p>Calculator App</p>
-          <p>Brick Game</p>
-          <button class="btn btn-info btn-lg ">
-            <a href="https://github.com/hlitch/class_code">Repo</a>
-          </button>
-        </div>
-        <div class="col-md-4 col-lg-3 text-center my-2">
-          <h2 class="text-center">React</h2>
-          <p>App where you can search any stock index supported by the Alpha Vantage API. Built using React.</p>
-          <button class="btn btn-success btn-lg "><a href="/stockIndex.html">
-              Stock App
-            </a></button>
-        </div>
-        <div class="col-md-4 col-lg-3 text-center my-2">
-          <h2 class="text-center">JavaScript</h2>
-          <p>Classic Brick Game. Written from scratch in Vanilla Javascript</p>
-          <button class="btn btn-warning btn-lg ">
-            <a href="brickGame/brickGame.html">
-              Brick Game
-            </a>
-          </button>
-        </div>
-        <div class="col-md-4 col-lg-3 text-center my-2">
-          <h2 class="text-center">Javascript calculator App</h2>
-          <p>A customized App that encompasses a calculator, P&L tracker, estimated income-tax and charity tracker. Full
-            version has a backend that saves data to a database using Node.js</p>
-          <button class="btn btn-danger btn-lg "><a href="javascripts/index.html">Calculator App</a></button>
-        </div>
-      </div>
-    </div>
+        <div class="px-4 pt-5 my-5 text-center border-bottom">
+            <h1 class="display-4 fw-bold">Some of my skills</h1>
+            <div class="col-lg-6 mx-auto">
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+                <p class="lead mb-2">⦁ Web Development: HTML/CSS, jQuery, Bootstrap, JavaScript, AJAX, React, Node.js,
+                    Express.</p>
+                <p class="lead mb-2">⦁ Software Development: Object oriented programming, C#, Windows Forms/.NET.</p>
+                <p class="lead mb-2">⦁ Database Development: MySQL, SQL. MongoDB (NoSQL).</p>
+                <p class="lead mb-2">⦁ MS Office Suite: Word, PowerPoint, Excel, Outlook</p>
+            </div>
+            <div>
+                <div class="container px-3">
+                    <img src="images/languages.jpg" class="img-fluid border rounded-3 shadow-lg mb-4"
+                        alt="Example image" width="700" height="500" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        React Stock App
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Stock App</strong>
+                        <p>Stock-Ticker App created using React. Retrieves real-time stock data using the Alpha Vantage
+                            API. On startup will be displayed lists of data for the most actively traded and best/worst
+                            performing stocks at market close.</p>
+                        <p>Search thousands of companies using a valid ticker symbol and see the most recent price, with
+                            a graph showing stock's performance over the past
+                            100 days.</p>
+                        <button class="btn"><a href="/stockIndex.html">Calculator App</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Brick Game
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Brick Game</strong>
+                        <p>Recreation of the classic brick game. On desktop, utilize the arrow keys to manipulate the
+                            direction of the paddle. Speed increases slightly as bricks are broken. Keep track of your
+                            score as you break some bricks.
+                            <button class="btn "><a href="brickgame/brickgame.html">Play
+                                    game</a></button>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Calculator App
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <span class="lead"></span>
+                            <p>Use the calculator to input income and expenses. Algorithm automatically calculates
+                                estimated
+                                income tax, 'maaser' (charity) and net Income.</p>
+                            <button class="btn"><a href="javascripts/index.html">Go to
+                                    calculator</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+
+        <h1 class="display-7 fw-bold text-center">Check out these projects by clicking the relevant link above</h1>
+        <hr>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="images/stockPic.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="images/brickbreakerPic.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="images/calcPic.png" class="d-block w-0" alt="...">
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span>Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span>Next</span>
+        </button>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
