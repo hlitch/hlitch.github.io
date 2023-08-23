@@ -71,7 +71,7 @@
 
     const paddle = {
         x: canvas3.width - 400,
-        y: canvas3.height + 200
+        y: canvas3.height - 25
     }
 
     function drawPaddle() {
