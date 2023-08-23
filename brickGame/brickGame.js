@@ -53,7 +53,7 @@
 
     for (let y = 0; y < 3; y++) {
         for (let x = 0; x < 20; x++) {
-            bricks.push(newBrick(x * 44, y * 30));
+            bricks.push(newBrick(x * 49, y * 30));
             console.log('Im x', x);
             console.log('Im y', y);
         }
@@ -71,7 +71,7 @@
 
     const paddle = {
         x: canvas3.width - 400,
-        y: canvas3.height + 265
+        y: canvas3.height + 405
     }
 
     function drawPaddle() {
